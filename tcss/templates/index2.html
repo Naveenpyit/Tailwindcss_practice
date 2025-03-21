@@ -1,0 +1,61 @@
+{% load static %}
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% tailwind_css %}
+</head>
+<body class="p-5 md:p-10 bg-gray-900 ">
+    <section class="bg-blue-900 rounded-2xl p-5">
+        <div class="container mx-auto">
+            <div class="flex">
+                <button class="text-white pr-3 lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+                      </svg>                      
+                </button>
+                <div class="flex">
+                    <img src="{% static 'img/726056.png' %}" class="w-12 h-12" alt="">
+                    <p class="text-4xl font-bold text-white ml-1">My Portfolio</p>    
+                </div>
+                <ul class="lg:flex text-white font-bold my-auto hidden ml-[500px] ">
+                    <li class="text-lg mr-2 "><a class="p-3 hover:border-2 border-blue-300 rounded " href="#">Home</a></li>
+                    <li class="text-lg mr-2 "><a class="p-3 hover:border-2 border-blue-300 rounded " href="#">About</a></li>
+                    <li class="text-lg mr-2 "><a class="p-3 hover:border-2 border-blue-300 rounded " href="#">Skills</a></li>
+                    <li class="text-lg mr-2 "><a class="p-3 hover:border-2 border-blue-300 rounded " href="#">Projects</a></li>
+                    <li class="text-lg mr-2 "><a class="p-3 hover:border-2 border-blue-300 rounded " href="#">Contact</a></li>
+                </ul>            
+                <a href="#" class="flex ml-auto text-white bg-red-400 px-3 py-3 rounded font-bold">
+                    <span class="pr-1 hidden lg:block">
+                        Download CV
+                    </span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                  </svg></a>
+            </div>
+            <div class="hidden">
+                <ul class="text-white font-bold my-auto lg:hidden">
+                    <li class="mt-1"><a class="py-2" href="#">Home</a></li>
+                    <li class="mt-1"><a class="py-2" href="#">About</a></li>
+                    <li class="mt-1"><a class="py-2" href="#">Skills</a></li>
+                    <li class="mt-1"><a class="py-2" href="#">Projects</a></li>
+                    <li class="mt-1"><a class="py-2" href="#">Contact</a></li>
+                </ul> 
+            </div>
+            <div class="flex py-5 lg:py-36">
+                <div class="w-full lg:w-1/2 text-white font-bold">
+                    <h1 class="mt-20 text-4xl lg:text-7xl text-center lg:text-left ">Naveenkumar M,</h1>
+                    <h2 class="text-2xl lg:text-4xl text-center lg:text-left mt-1 font-light mt-3">Full Stack Django and API Developer,</h2>
+                </div>
+                <div class="hidden lg:flex w-1/2 ">
+                    <img class="mx-auto rounded-2xl " src="{% static 'img/laptop-with-program-code-isometric-icon-software-development-programming-applications-dark-neon_39422-971.avif' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>
