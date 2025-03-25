@@ -5,23 +5,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Naveen</title>
     <!-- <link rel="stylesheet" href="{% static 'css/index.css' %}"> -->
     {% tailwind_css %}
 </head>
-<body class="p-7">
-    <section class="bg-purple-100 rounded-2xl p-5">
+<body class="p-5 md:p-10 bg-gray-900">
+    <section class="bg-blue-900 rounded-xl p-5 mx-auto" id="section1">
         <div class="container mx-auto">
-            <div class="flex">
-                <a class="text-black text-3xl font-bold pr-5 border-r border-purple-300 mr-5" href="#">Agency</a>
-                <ul class="flex my-auto text-gray-600">
-                    <li class="mr-5"><a class="px-3 p-3" href="#">Home</a></li>
-                    <li class="mr-5"><a class="px-3 p-3" href="#">About</a></li>
-                    <li class="mr-5"><a class="px-3 p-3" href="#">Services</a></li>
-                    <li class="mr-5"><a class="px-3 p-3" href="#">Portofolio</a></li>
-                    <li class="mr-5"><a class="px-3 p-3" href="#">Contact</a></li>
+            <div class="flex text-white">
+                <div class="flex">
+                    <button class="mr-3 lg:hidden p-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>                  
+                    </button>
+                </div>
+                <div class="flex">
+                    <!-- <img class="w-12 h-12 mr-2" src="{% static 'img/726056.png' %}" alt=""> -->
+                    <p class="font-bold text-3xl lg:text-4xl">My Portfolio</p>
+                </div>
+                <ul class="flex my-auto ml-auto font-bold lg:flex hidden">
+                    <li class="mr-8 text-xl py-auto px-auto"><a class="hover:border-2 border-white-200 rounded p-2" href="#section1">Home</a></li>
+                    <li class="mr-8 text-xl py-auto px-auto"><a class="hover:border-2 border-white-200 rounded p-2" href="#section2">About Me</a></li>
+                    <li class="mr-8 text-xl py-auto px-auto"><a class="hover:border-2 border-white-200 rounded p-2" href="#">Skills</a></li>
+                    <li class="mr-8 text-xl py-auto px-auto"><a class="hover:border-2 border-white-200 rounded p-2" href="#">Projects</a></li>
+                    <li class="mr-8 text-xl py-auto px-auto"><a class="hover:border-2 border-white-200 rounded p-2" href="#">Contact</a></li>
                 </ul>
-                <a href="#" class="ml-auto text-white bg-red-400 px-3 py-3 rounded ">Get a Quote</a>
+                <div class="flex ml-auto">
+                    <a class="flex font-bold bg-red-500 my-auto  p-3 rounded" href="#">
+                    <Span class="mr-1 hidden lg:block">Download CV</Span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                      </svg></a>
+                </div>
+            </div>
+            <div class="hidden"> 
+                <ul class="font-bold text-white my-auto lg:hidden">
+                    <li class="mt-1"><a class="py-2" href="#">Home</a></li>
+                    <li class="mt-1"><a class="py-2" href="#">About</a></li>
+                    <li class="mt-1"><a class="py-2" href="#">Skills</a></li>
+                    <li class="mt-1"><a class="py-2" href="#">Projects</a></li>
+                    <li class="mt-1"><a class="py-2" href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="flex py-3 lg:py-36">
+                <div class="md:w-full lg:w-1/2 font-bold text-white ">
+                    <h1 class="mt-20 text-4xl text-center lg:text-7xl lg:text-left ">Naveenkumar M,</h1>
+                    <h2 class="text-3xl mt-2 text-center lg:text-4xl lg:text-left font-light grayn4erline2 ">Full gray Django and Api Developer,</h2>
+                    <p class="font-light text-xl text-center lg:text-xl lg:text-left xl-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati nostrum at animi nesciunt debitis necessitatibus aut ab quis repellendus quas error, exercitationem accusantium neque laudantium vero provident quo eveniet aspernatur?</p>
+                </div>
+                <div class="hidden lg:flex w-1/2">
+                    <img class="mx-auto rounded-2xl" src="{% static 'img/laptop-with-program-code-isometric-icon-software-development-programming-applications-dark-neon_39422-971.avif' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-blue-900 rounded-xl p-5 mx-auto mt-7" id="section2">
+        <div class="flex py-3 lg:py-36">
+            <div class="hidden lg:flex w-1/2">
+                <img class="mx-auto rounded-full" style="width: 580px; height: 580px;" src="{% static 'img/1742837786437.jpg' %}" alt="">
+            </div>
+            <div class="md:w-full lg:w-1/2">
+                <!-- <span class="text-xl text-center lg:text-3xl text-left text-white font-bold bg-red-500 p-3 rounded ">MY INTRO</span><br> -->
+                <h1 class="mt-10 text-3xl text-center lg:text-5xl lg:text-left text-white font-bold">MY INTRO</h1><br>
+                <hr>
+                <p class="text-white font-light mt-4 text-xl text-center lg:text-2xl lg:text-left">As a Django API developer, you're likely focused on building web APIs using Django, a powerful Python framework known for its simplicity and scalability. You probably work with Django Rest Framework (DRF) to create RESTful APIs that interact with databases, handle authentication, and support a range of client applications.And Also very much interested in Frontend Development using a React.</p>
+                <div class="flex mt-5 text-white">
+                    <table class="text-xl text-center lg:text-2xl lg:text-left">
+                        <tr>
+                            <td class="text-black text-lg text-center p-1 lg:text-2xl text-left"><h1 class="font-bold bg-gray-400 rounded mt-1 p-2">NAME:</h1></td>
+                            <td class="text-base  text-xl font-light ml-10"><h1 class="">Naveenkumar M</h1></td>
+                        </tr>
+                        <tr>
+                            <td><h1 class="text-black text-2xl font-bold bg-gray-400 rounded mt-1 p-2">DOB:</h1></td>
+                            <td><h1 class="text-xl font-light ml-10">16th August,2002</h1></td>
+                        </tr>
+                        <tr>
+                            <td><h1 class="text-black text-2xl font-bold bg-gray-400 rounded mt-1 p-2">HOME:</h1></td>
+                            <td><h1 class="text-xl font-light ml-10">Tirupur,Tamilnadu,India</h1></td>
+                        </tr>
+                        <tr>
+                            <td><h1 class="text-black text-2xl font-bold bg-gray-400 rounded mt-1 p-2">ZIP:</h1></td>
+                            <td><h1 class="text-xl font-light ml-10">641605</h1></td>
+                        </tr>
+                        <tr>
+                            <td><h1 class="text-black text-2xl font-bold bg-gray-400 rounded mt-1 p-2">EMAIL:</h1></td>
+                            <td><h1 class="text-xl font-light ml-10">naveenpyit@gmail.com</h1></td>
+                        </tr>
+                        <tr>
+                            <td><h1 class="text-black text-2xl font-bold bg-gray-400 rounded mt-1 p-2">PHONE:</h1></td>
+                            <td><h1 class="text-xl font-light ml-10">9360610830</h1></td>
+                        </tr>
+                    </table>
+                </div>                  
             </div>
             
         </div>

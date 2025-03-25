@@ -5,29 +5,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Naveen2</title>
     {% tailwind_css %}
 </head>
 <body class="p-5 md:p-10 bg-gray-900 ">
     <section class="bg-blue-900 rounded-2xl p-5">
         <div class="container mx-auto">
             <div class="flex">
-                <button class="text-white pr-3 lg:hidden">
+                <button class="text-white pr-3 lg:hidden mb-3">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
                       </svg>                      
                 </button>
                 <div class="flex">
-                    <img src="{% static 'img/726056.png' %}" class="w-12 h-12" alt="">
-                    <p class="text-4xl font-bold text-white ml-1">My Portfolio</p>    
+                    <img src="{% static 'img/726056.png' %}" class="w-12 h-12 md:w-10 h-10" alt="">
+                    <p class="text-2xl lg:text-4xl font-bold text-white ml-2">My Portfolio</p>    
                 </div>
-                <ul class="lg:flex text-white font-bold my-auto hidden ml-[500px] ">
-                    <li class="text-lg mr-2 "><a class="p-3 hover:border-2 border-blue-300 rounded " href="#">Home</a></li>
-                    <li class="text-lg mr-2 "><a class="p-3 hover:border-2 border-blue-300 rounded " href="#">About</a></li>
-                    <li class="text-lg mr-2 "><a class="p-3 hover:border-2 border-blue-300 rounded " href="#">Skills</a></li>
-                    <li class="text-lg mr-2 "><a class="p-3 hover:border-2 border-blue-300 rounded " href="#">Projects</a></li>
-                    <li class="text-lg mr-2 "><a class="p-3 hover:border-2 border-blue-300 rounded " href="#">Contact</a></li>
-                </ul>            
+                <div class="flex ml-auto">
+                    
+                    <ul class="lg:flex text-white font-bold my-auto hidden ml-auto">
+                        <li class="text-lg mr-5 "><a class="p-3 hover:border-2 border-blue-300 rounded " href="#">Home</a></li>
+                        <li class="text-lg mr-5 "><a class="p-3 hover:border-2 border-blue-300 rounded " href="#">About</a></li>
+                        <li class="text-lg mr-5 "><a class="p-3 hover:border-2 border-blue-300 rounded " href="#">Skills</a></li>
+                        <li class="text-lg mr-5 "><a class="p-3 hover:border-2 border-blue-300 rounded " href="#">Projects</a></li>
+                        <li class="text-lg mr-5 "><a class="p-3 hover:border-2 border-blue-300 rounded " href="#">Contact</a></li>
+                    </ul>
+                </div>             
                 <a href="#" class="flex ml-auto text-white bg-red-400 px-3 py-3 rounded font-bold">
                     <span class="pr-1 hidden lg:block">
                         Download CV
@@ -46,8 +49,8 @@
                 </ul> 
             </div>
             <div class="flex py-5 lg:py-36">
-                <div class="w-full lg:w-1/2 text-white font-bold">
-                    <h1 class="mt-20 text-4xl lg:text-7xl text-center lg:text-left ">Naveenkumar M,</h1>
+                <div class="md:w-full lg:w-1/2 text-white font-bold">
+                    <h1 class="mt-20 text-4xl lg:text-7xl text-center lg:text-left">Naveenkumar M,</h1>
                     <h2 class="text-2xl lg:text-4xl text-center lg:text-left mt-1 font-light mt-3">Full Stack Django and API Developer,</h2>
                 </div>
                 <div class="hidden lg:flex w-1/2 ">
