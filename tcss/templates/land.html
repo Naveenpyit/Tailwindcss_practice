@@ -1,0 +1,325 @@
+{% load static %}
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Project</title>
+    {% tailwind_css %}
+</head>
+<body >
+    <!-- Nav Section -->
+    <div class=" bg-green-200 rounded">
+        <nav class="flex justify-between items-center">
+            <div class="h-20 w-20 mt-2">
+                <a href="#"><img class="rounded-full ms-2" src="{% static 'img/download.png' %}" alt=""></a>
+            </div>
+            <ul class="flex space-x-7 font-bold">
+                <li><a class="text-black hover:text-blue-700 hover:border-2 border-black p-2 rounded" href="#Hero">Services</a></li>
+                <li><a class="text-black hover:text-blue-700 hover:border-2 border-black p-2 rounded" href="#pricing">Pricing</a></li>
+                <li><a class="text-black hover:text-blue-700 hover:border-2 border-black p-2 rounded" href="#Stories">About</a></li>
+                <li><a class="text-black hover:text-blue-700 hover:border-2 border-black p-2 rounded" href="#Footer">Contact</a></li>
+            </ul>
+            <button class="bg-indigo-400 font-bold text-white me-4 rounded px-5 py-3 border-2 border-black hover:bg-blue-300">Sign Up</button>
+        </nav>
+    </div>
+    <!-- Hero Section -->
+    <div class="container mx-auto flex flex-col md:flex-row" id="Hero">
+        <div class="md:w-full lg:w-1/2 text-center mt-20">
+            <p class=" font-medium text-center mx-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci facere cupiditate ad similique velit eum labore et inventore magnam delectus quaerat aperiam, odit est amet sed molestias autem esse. Eaque quibusdam quasi adipisci nemo repellendus totam autem reprehenderit provident natus.</p>
+            <button class="bg-indigo-400 p-3 text-white font-bold mt-5 rounded border-2 border-black hover:bg-green-400">Get Started</button>
+        </div>
+        <div class="md:w-1/2 ">
+            <img class="mt-10 mx-auto " src="{% static 'img/hero.png' %}" alt="">
+        </div>
+    </div>
+    <!-- Main Section -->
+     <div class="container mx-auto flex flex-col md:flex-row sm:gap-12 mt-12">
+        <div class="w-full md:w-1/3 text-center flex flex-col items-center sm:mt-4 ">
+            <h1 class="font-bold text-2xl bg-green-300 p-3 rounded">Web Development</h1>
+            <img class="h-64 w-64 mt-4" src="{% static 'img/web-developer.svg' %}" alt="">
+            <p class="mt-4 text-lg font-medium">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, laborum a vel velit blanditiis explicabo distinctio aperiam cumque laudantium deserunt tempora? Quas quam eos consequatur?</p>
+        </div>
+        <div class="w-full  md:w-1/3 text-center flex flex-col items-center sm:mt-4">
+            <h1 class="font-bold text-2xl bg-green-300 p-3 rounded">Mobile App Development</h1>
+            <img class="h-64 w-64 mt-4" src="{% static 'img/mobile-application.svg' %}" alt="">
+            <p class="mt-4 text-lg font-medium">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, laborum a vel velit blanditiis explicabo distinctio aperiam cumque laudantium deserunt tempora? Quas quam eos consequatur?</p>
+        </div>
+        <div class="w-full  md:w-1/3 text-center flex flex-col items-center sm:mt-4">
+            <h1 class="font-bold text-2xl bg-green-300 p-3 rounded">Design</h1>
+            <img class="h-64 w-64 mt-4" src="{% static 'img/designer.svg' %}" alt="">
+            <p class="mt-4 text-lg font-medium">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, laborum a vel velit blanditiis explicabo distinctio aperiam cumque laudantium deserunt tempora? Quas quam eos consequatur?</p>
+        </div>
+     </div><br>
+     <hr >
+     <!-- Pricing Section -->
+      <div class="container mx-auto mt-10" id="pricing">
+        <div class="text-center ">
+            <h1 class="text-5xl text-green-400 font-bold ">Pricing</h1>
+            <p class="text-2xl mt-3">Offers multiple packages for Monthly and yearly Subcriptions.</p>
+            <p class="text-2xl">featured plans Are here.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3  justify-around mt-12  justify-items-center">
+            <div class="bg-gray-200 h-96 w-96 rounded-2xl p-3  hover:shadow-2xl mt-5 sm:mt-12 ">
+                <h1 class="font-bold text-5xl text-center">$99</h1>
+                <h2 class="text-green-500 font-bold text-2xl mt-3 text-center">Basic</h2>
+                
+                <ul class="ml-5">
+                    <p class="font-semibold text-lg">All basic features are</p>
+                    <li class="flex items-center mt-2">
+                        <div>
+                            <svg class="text-indigo-400 w-8 h-8"  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M6 3C4.34315 3 3 4.34315 3 6V18C3 19.6569 4.34315 21 6 21H18C19.6569 21 21 19.6569 21 18V6C21 4.34315 19.6569 3 18 3H6ZM17.8 8.6C18.1314 8.15817 18.0418 7.53137 17.6 7.2C17.1582 6.86863 16.5314 6.95817 16.2 7.4L10.8918 14.4776L8.70711 12.2929C8.31658 11.9024 7.68342 11.9024 7.29289 12.2929C6.90237 12.6834 6.90237 13.3166 7.29289 13.7071L10.2929 16.7071C10.4979 16.9121 10.7817 17.018 11.0709 16.9975C11.3601 16.9769 11.6261 16.8319 11.8 16.6L17.8 8.6Z" fill="#000000"/>
+                            </svg>
+                        </div>
+                        <div>
+                            Core Business System
+                        </div>
+                    </li>
+                    <li class="flex items-center mt-2">
+                        <div>
+                            <svg class="text-indigo-400 w-8 h-8"  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M6 3C4.34315 3 3 4.34315 3 6V18C3 19.6569 4.34315 21 6 21H18C19.6569 21 21 19.6569 21 18V6C21 4.34315 19.6569 3 18 3H6ZM17.8 8.6C18.1314 8.15817 18.0418 7.53137 17.6 7.2C17.1582 6.86863 16.5314 6.95817 16.2 7.4L10.8918 14.4776L8.70711 12.2929C8.31658 11.9024 7.68342 11.9024 7.29289 12.2929C6.90237 12.6834 6.90237 13.3166 7.29289 13.7071L10.2929 16.7071C10.4979 16.9121 10.7817 17.018 11.0709 16.9975C11.3601 16.9769 11.6261 16.8319 11.8 16.6L17.8 8.6Z" fill="#000000"/>
+                            </svg>
+                        </div>
+                        <div>
+                            Core Business System
+                        </div>
+                    </li>
+                    <li class="flex items-center mt-2">
+                        <div>
+                            <svg class="text-indigo-400 w-8 h-8"  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M6 3C4.34315 3 3 4.34315 3 6V18C3 19.6569 4.34315 21 6 21H18C19.6569 21 21 19.6569 21 18V6C21 4.34315 19.6569 3 18 3H6ZM17.8 8.6C18.1314 8.15817 18.0418 7.53137 17.6 7.2C17.1582 6.86863 16.5314 6.95817 16.2 7.4L10.8918 14.4776L8.70711 12.2929C8.31658 11.9024 7.68342 11.9024 7.29289 12.2929C6.90237 12.6834 6.90237 13.3166 7.29289 13.7071L10.2929 16.7071C10.4979 16.9121 10.7817 17.018 11.0709 16.9975C11.3601 16.9769 11.6261 16.8319 11.8 16.6L17.8 8.6Z" fill="#000000"/>
+                            </svg>
+                        </div>
+                        <div>
+                            Core Business System
+                        </div>
+                    </li>
+                    <li class="flex items-center mt-2">
+                        <div>
+                            <svg class="w-8 h-8 text-red-500" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="currentColor" d="M15 12.75C15.4142 12.75 15.75 12.4142 15.75 12C15.75 11.5858 15.4142 11.25 15 11.25H9C8.58579 11.25 8.25 11.5858 8.25 12C8.25 12.4142 8.58579 12.75 9 12.75H15Z" fill="#1C274C"/>
+                                <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M12 1.25C6.06294 1.25 1.25 6.06294 1.25 12C1.25 17.9371 6.06294 22.75 12 22.75C17.9371 22.75 22.75 17.9371 22.75 12C22.75 6.06294 17.9371 1.25 12 1.25ZM2.75 12C2.75 6.89137 6.89137 2.75 12 2.75C17.1086 2.75 21.25 6.89137 21.25 12C21.25 17.1086 17.1086 21.25 12 21.25C6.89137 21.25 2.75 17.1086 2.75 12Z" fill="#1C274C"/>
+                            </svg>
+                        </div>
+                        <div>
+                            Customized Features
+                        </div>
+                    </li>
+                    <li class="flex items-center mt-2">
+                        <div>
+                            <svg class="w-8 h-8 text-red-500" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="currentColor" d="M15 12.75C15.4142 12.75 15.75 12.4142 15.75 12C15.75 11.5858 15.4142 11.25 15 11.25H9C8.58579 11.25 8.25 11.5858 8.25 12C8.25 12.4142 8.58579 12.75 9 12.75H15Z" fill="#1C274C"/>
+                                <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M12 1.25C6.06294 1.25 1.25 6.06294 1.25 12C1.25 17.9371 6.06294 22.75 12 22.75C17.9371 22.75 22.75 17.9371 22.75 12C22.75 6.06294 17.9371 1.25 12 1.25ZM2.75 12C2.75 6.89137 6.89137 2.75 12 2.75C17.1086 2.75 21.25 6.89137 21.25 12C21.25 17.1086 17.1086 21.25 12 21.25C6.89137 21.25 2.75 17.1086 2.75 12Z" fill="#1C274C"/>
+                            </svg>
+                        </div>
+                        <div>
+                            Declined Infrastructure
+                        </div>
+                    </li>
+                </ul>
+                <button class="bg-indigo-400 p-3 text-white font-bold mt-5 rounded-2xl relative bottom-0 transform translate-x-32 translate-y-2 hover:bg-green-400">Get Started</button>
+            </div>
+            <div class="bg-gray-200 h-96 w-96 rounded-2xl  p-3 hover:shadow-2xl  border-4 border-indigo-500 border-dashed sm:mt-12 ">
+                <h1 class="font-bold text-5xl text-center">$299</h1>
+                <h2 class="text-green-500 font-bold text-2xl mt-3 text-center">Medium</h2>
+                
+                <ul class="ml-5">
+                    <p class="font-semibold text-lg">All basic features are</p>
+                    <li class="flex items-center mt-2">
+                        <div>
+                            <svg class="text-indigo-400 w-8 h-8"  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M6 3C4.34315 3 3 4.34315 3 6V18C3 19.6569 4.34315 21 6 21H18C19.6569 21 21 19.6569 21 18V6C21 4.34315 19.6569 3 18 3H6ZM17.8 8.6C18.1314 8.15817 18.0418 7.53137 17.6 7.2C17.1582 6.86863 16.5314 6.95817 16.2 7.4L10.8918 14.4776L8.70711 12.2929C8.31658 11.9024 7.68342 11.9024 7.29289 12.2929C6.90237 12.6834 6.90237 13.3166 7.29289 13.7071L10.2929 16.7071C10.4979 16.9121 10.7817 17.018 11.0709 16.9975C11.3601 16.9769 11.6261 16.8319 11.8 16.6L17.8 8.6Z" fill="#000000"/>
+                            </svg>
+                        </div>
+                        <div>
+                            Core Business System
+                        </div>
+                    </li>
+                    <li class="flex items-center mt-2">
+                        <div>
+                            <svg class="text-indigo-400 w-8 h-8"  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M6 3C4.34315 3 3 4.34315 3 6V18C3 19.6569 4.34315 21 6 21H18C19.6569 21 21 19.6569 21 18V6C21 4.34315 19.6569 3 18 3H6ZM17.8 8.6C18.1314 8.15817 18.0418 7.53137 17.6 7.2C17.1582 6.86863 16.5314 6.95817 16.2 7.4L10.8918 14.4776L8.70711 12.2929C8.31658 11.9024 7.68342 11.9024 7.29289 12.2929C6.90237 12.6834 6.90237 13.3166 7.29289 13.7071L10.2929 16.7071C10.4979 16.9121 10.7817 17.018 11.0709 16.9975C11.3601 16.9769 11.6261 16.8319 11.8 16.6L17.8 8.6Z" fill="#000000"/>
+                            </svg>
+                        </div>
+                        <div>
+                            Core Business System
+                        </div>
+                    </li>
+                    <li class="flex items-center mt-2">
+                        <div>
+                            <svg class="text-indigo-400 w-8 h-8"  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M6 3C4.34315 3 3 4.34315 3 6V18C3 19.6569 4.34315 21 6 21H18C19.6569 21 21 19.6569 21 18V6C21 4.34315 19.6569 3 18 3H6ZM17.8 8.6C18.1314 8.15817 18.0418 7.53137 17.6 7.2C17.1582 6.86863 16.5314 6.95817 16.2 7.4L10.8918 14.4776L8.70711 12.2929C8.31658 11.9024 7.68342 11.9024 7.29289 12.2929C6.90237 12.6834 6.90237 13.3166 7.29289 13.7071L10.2929 16.7071C10.4979 16.9121 10.7817 17.018 11.0709 16.9975C11.3601 16.9769 11.6261 16.8319 11.8 16.6L17.8 8.6Z" fill="#000000"/>
+                            </svg>
+                        </div>
+                        <div>
+                            Core Business System
+                        </div>
+                    </li>
+                    <li class="flex items-center mt-2">
+                        <div>
+                            <svg class="text-indigo-400 w-8 h-8"  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M6 3C4.34315 3 3 4.34315 3 6V18C3 19.6569 4.34315 21 6 21H18C19.6569 21 21 19.6569 21 18V6C21 4.34315 19.6569 3 18 3H6ZM17.8 8.6C18.1314 8.15817 18.0418 7.53137 17.6 7.2C17.1582 6.86863 16.5314 6.95817 16.2 7.4L10.8918 14.4776L8.70711 12.2929C8.31658 11.9024 7.68342 11.9024 7.29289 12.2929C6.90237 12.6834 6.90237 13.3166 7.29289 13.7071L10.2929 16.7071C10.4979 16.9121 10.7817 17.018 11.0709 16.9975C11.3601 16.9769 11.6261 16.8319 11.8 16.6L17.8 8.6Z" fill="#000000"/>
+                            </svg>
+                        </div>
+                        <div>
+                            Customized Features
+                        </div>
+                    </li>
+                    <li class="flex items-center mt-2">
+                        <div>
+                            <svg class="w-8 h-8 text-red-500" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="currentColor" d="M15 12.75C15.4142 12.75 15.75 12.4142 15.75 12C15.75 11.5858 15.4142 11.25 15 11.25H9C8.58579 11.25 8.25 11.5858 8.25 12C8.25 12.4142 8.58579 12.75 9 12.75H15Z" fill="#1C274C"/>
+                                <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M12 1.25C6.06294 1.25 1.25 6.06294 1.25 12C1.25 17.9371 6.06294 22.75 12 22.75C17.9371 22.75 22.75 17.9371 22.75 12C22.75 6.06294 17.9371 1.25 12 1.25ZM2.75 12C2.75 6.89137 6.89137 2.75 12 2.75C17.1086 2.75 21.25 6.89137 21.25 12C21.25 17.1086 17.1086 21.25 12 21.25C6.89137 21.25 2.75 17.1086 2.75 12Z" fill="#1C274C"/>
+                            </svg>
+                        </div>
+                        <div>
+                            Declined Infrastructure
+                        </div>
+                    </li>
+                </ul>
+                <button class="bg-indigo-400 p-3 text-white font-bold mt-5 rounded-2xl relative bottom-0 transform translate-x-32  hover:bg-green-400">Get Started</button>
+            </div>
+            <div class="bg-gray-200 h-96 w-96 rounded-2xl  p-3 hover:shadow-2xl mt-5 sm:mt-12">
+                <h1 class="font-bold text-5xl text-center">$699</h1>
+                <h2 class="text-green-500 font-bold text-2xl mt-3 text-center">Luxury</h2>
+                <ul class="ml-5">
+                    <p class="font-semibold text-lg">All basic features are</p>
+                    <li class="flex items-center mt-2">
+                        <div>
+                            <svg class="text-indigo-400 w-8 h-8"  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M6 3C4.34315 3 3 4.34315 3 6V18C3 19.6569 4.34315 21 6 21H18C19.6569 21 21 19.6569 21 18V6C21 4.34315 19.6569 3 18 3H6ZM17.8 8.6C18.1314 8.15817 18.0418 7.53137 17.6 7.2C17.1582 6.86863 16.5314 6.95817 16.2 7.4L10.8918 14.4776L8.70711 12.2929C8.31658 11.9024 7.68342 11.9024 7.29289 12.2929C6.90237 12.6834 6.90237 13.3166 7.29289 13.7071L10.2929 16.7071C10.4979 16.9121 10.7817 17.018 11.0709 16.9975C11.3601 16.9769 11.6261 16.8319 11.8 16.6L17.8 8.6Z" fill="#000000"/>
+                            </svg>
+                        </div>
+                        <div>
+                            Core Business System
+                        </div>
+                    </li>
+                    <li class="flex items-center mt-2">
+                        <div>
+                            <svg class="text-indigo-400 w-8 h-8"  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M6 3C4.34315 3 3 4.34315 3 6V18C3 19.6569 4.34315 21 6 21H18C19.6569 21 21 19.6569 21 18V6C21 4.34315 19.6569 3 18 3H6ZM17.8 8.6C18.1314 8.15817 18.0418 7.53137 17.6 7.2C17.1582 6.86863 16.5314 6.95817 16.2 7.4L10.8918 14.4776L8.70711 12.2929C8.31658 11.9024 7.68342 11.9024 7.29289 12.2929C6.90237 12.6834 6.90237 13.3166 7.29289 13.7071L10.2929 16.7071C10.4979 16.9121 10.7817 17.018 11.0709 16.9975C11.3601 16.9769 11.6261 16.8319 11.8 16.6L17.8 8.6Z" fill="#000000"/>
+                            </svg>
+                        </div>
+                        <div>
+                            Core Business System
+                        </div>
+                    </li>
+                    <li class="flex items-center mt-2">
+                        <div>
+                            <svg class="text-indigo-400 w-8 h-8"  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M6 3C4.34315 3 3 4.34315 3 6V18C3 19.6569 4.34315 21 6 21H18C19.6569 21 21 19.6569 21 18V6C21 4.34315 19.6569 3 18 3H6ZM17.8 8.6C18.1314 8.15817 18.0418 7.53137 17.6 7.2C17.1582 6.86863 16.5314 6.95817 16.2 7.4L10.8918 14.4776L8.70711 12.2929C8.31658 11.9024 7.68342 11.9024 7.29289 12.2929C6.90237 12.6834 6.90237 13.3166 7.29289 13.7071L10.2929 16.7071C10.4979 16.9121 10.7817 17.018 11.0709 16.9975C11.3601 16.9769 11.6261 16.8319 11.8 16.6L17.8 8.6Z" fill="#000000"/>
+                            </svg>
+                        </div>
+                        <div>
+                            Core Business System
+                        </div>
+                    </li>
+                    <li class="flex items-center mt-2">
+                        <div>
+                            <svg class="text-indigo-400 w-8 h-8"  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M6 3C4.34315 3 3 4.34315 3 6V18C3 19.6569 4.34315 21 6 21H18C19.6569 21 21 19.6569 21 18V6C21 4.34315 19.6569 3 18 3H6ZM17.8 8.6C18.1314 8.15817 18.0418 7.53137 17.6 7.2C17.1582 6.86863 16.5314 6.95817 16.2 7.4L10.8918 14.4776L8.70711 12.2929C8.31658 11.9024 7.68342 11.9024 7.29289 12.2929C6.90237 12.6834 6.90237 13.3166 7.29289 13.7071L10.2929 16.7071C10.4979 16.9121 10.7817 17.018 11.0709 16.9975C11.3601 16.9769 11.6261 16.8319 11.8 16.6L17.8 8.6Z" fill="#000000"/>
+                            </svg>
+                        </div>
+                        <div>
+                            Customized Features
+                        </div>
+                    </li>
+                    <li class="flex items-center mt-2">
+                        <div>
+                            <svg class="text-indigo-400 w-8 h-8"  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M6 3C4.34315 3 3 4.34315 3 6V18C3 19.6569 4.34315 21 6 21H18C19.6569 21 21 19.6569 21 18V6C21 4.34315 19.6569 3 18 3H6ZM17.8 8.6C18.1314 8.15817 18.0418 7.53137 17.6 7.2C17.1582 6.86863 16.5314 6.95817 16.2 7.4L10.8918 14.4776L8.70711 12.2929C8.31658 11.9024 7.68342 11.9024 7.29289 12.2929C6.90237 12.6834 6.90237 13.3166 7.29289 13.7071L10.2929 16.7071C10.4979 16.9121 10.7817 17.018 11.0709 16.9975C11.3601 16.9769 11.6261 16.8319 11.8 16.6L17.8 8.6Z" fill="#000000"/>
+                            </svg>
+                        </div>
+                        <div>
+                            Declined Infrastructure
+                        </div>
+                    </li>
+                </ul>
+                <button class="bg-indigo-400 p-3 text-white font-bold mt-5 relative bottom-0 transform translate-x-32 rounded-2xl  hover:bg-green-400">Get Started</button>
+            </div>
+        </div>
+      </div>
+      <!-- Stories Section -->
+      <div class="container mx-auto mt-10" id="Stories">
+        <div class="text-center ">
+            <p>Recent Updates</p>
+            <p class="text-5xl">Featured Stories</p>
+        </div>
+        <div class="grid md:grid-cols-3 grid-cols-1 sm:mx-32 gap-4 justify-items-center mt-4">
+            <div class="bg-gray-200 rounded-xl text-center hover:shadow-2xl">
+                <img class="mt-4 mx-auto" src="https://picsum.photos/400" alt="">
+                <p class="text-indigo-500 text-2xl mt-4">Google rankings</p>
+                <p class="text-xl my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, ipsa?</p>
+                <a class="text-2xl text-indigo-500 font-bold my-2" href="#">Read more</a>
+            </div>
+            <div class="bg-gray-200 rounded-xl text-center hover:shadow-2xl">
+                <img class="mt-4 mx-auto" src="https://picsum.photos/400" alt="">
+                <p class="text-indigo-500 text-2xl mt-4">Communication</p>
+                <p class="text-xl my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, ipsa?</p>
+                <a class="text-2xl text-indigo-500 font-bold my-2" href="#">Read more</a>
+            </div>
+            <div class="bg-gray-200 rounded-xl text-center hover:shadow-2xl">
+                <img class="mt-4 mx-auto" src="https://picsum.photos/400" alt="">
+                <p class="text-indigo-500 text-2xl mt-4">Remote Working</p>
+                <p class="text-xl my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, ipsa?</p>
+                <a class="text-2xl text-indigo-500 font-bold my-2" href="#">Read more</a>
+            </div>
+        </div>
+      </div>
+      <footer class="bg-gray-200 h-80 mt-32" id="Footer">
+            <div class="container mx-auto pt-32 flex">
+                <div class="w-1/4 ">
+                    <p class="text-4xl font-bold">Naveenkumar</p>
+                </div>
+                <div class="w-1/2 flex ">
+                    <div class="pr-24">
+                        <h2 class="text-2xl font bold">Links</h2>
+                        <ul class="space-y-2 mt-4">
+                            <li>About</li>
+                            <li>Products</li>
+                        </ul>
+                    </div>
+                    <div class="pr-24">
+                        <h2 class="text-2xl font bold">Links</h2>
+                        <ul class="space-y-2 mt-4">
+                            <li>About</li>
+                            <li>Products</li>
+                        </ul>
+                    </div>
+                    <div class="pr-24">
+                        <h2 class="text-2xl font bold">Links</h2>
+                        <ul class="space-y-2 mt-4">
+                            <li>About</li>
+                            <li>Products</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="w-1/4 flex justify-end">
+                    <!-- Facebook -->
+                    <button class="mr-4">
+                        <svg class="w-10 h-10 " viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M20 1C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H20ZM20 3C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H15V13.9999H17.0762C17.5066 13.9999 17.8887 13.7245 18.0249 13.3161L18.4679 11.9871C18.6298 11.5014 18.2683 10.9999 17.7564 10.9999H15V8.99992C15 8.49992 15.5 7.99992 16 7.99992H18C18.5523 7.99992 19 7.5522 19 6.99992V6.31393C19 5.99091 18.7937 5.7013 18.4813 5.61887C17.1705 5.27295 16 5.27295 16 5.27295C13.5 5.27295 12 6.99992 12 8.49992V10.9999H10C9.44772 10.9999 9 11.4476 9 11.9999V12.9999C9 13.5522 9.44771 13.9999 10 13.9999H12V21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20Z" fill="#0F0F0F"/>
+                        </svg>
+                    </button>
+                    <!-- Instagram -->
+                    <button class="mr-4">
+                        <svg class="w-10 h-10 " viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="#0F0F0F"/>
+                            <path d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" fill="#0F0F0F"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z" fill="#0F0F0F"/>
+                        </svg>
+                    </button>
+                    <!-- Twitter -->
+                    <button class="mr-4">
+                        <svg class="w-10 h-10 " viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7828 3.91825C20.1313 3.83565 20.3743 3.75444 20.5734 3.66915C20.8524 3.54961 21.0837 3.40641 21.4492 3.16524C21.7563 2.96255 22.1499 2.9449 22.4739 3.11928C22.7979 3.29366 23 3.6319 23 3.99986C23 5.08079 22.8653 5.96673 22.5535 6.7464C22.2911 7.40221 21.9225 7.93487 21.4816 8.41968C21.2954 11.7828 20.3219 14.4239 18.8336 16.4248C17.291 18.4987 15.2386 19.8268 13.0751 20.5706C10.9179 21.3121 8.63863 21.4778 6.5967 21.2267C4.56816 20.9773 2.69304 20.3057 1.38605 19.2892C1.02813 19.0108 0.902313 18.5264 1.07951 18.109C1.25671 17.6916 1.69256 17.4457 2.14144 17.5099C3.42741 17.6936 4.6653 17.4012 5.6832 16.9832C5.48282 16.8742 5.29389 16.7562 5.11828 16.6346C4.19075 15.9925 3.4424 15.1208 3.10557 14.4471C2.96618 14.1684 2.96474 13.8405 3.10168 13.5606C3.17232 13.4161 3.27562 13.293 3.40104 13.1991C2.04677 12.0814 1.49999 10.5355 1.49999 9.49986C1.49999 9.19192 1.64187 8.90115 1.88459 8.71165C1.98665 8.63197 2.10175 8.57392 2.22308 8.53896C2.12174 8.24222 2.0431 7.94241 1.98316 7.65216C1.71739 6.3653 1.74098 4.91284 2.02985 3.75733C2.1287 3.36191 2.45764 3.06606 2.86129 3.00952C3.26493 2.95299 3.6625 3.14709 3.86618 3.50014C4.94369 5.36782 6.93116 6.50943 8.78086 7.18568C9.6505 7.50362 10.4559 7.70622 11.0596 7.83078C11.1899 6.61019 11.5307 5.6036 12.0538 4.80411C12.7439 3.74932 13.7064 3.12525 14.74 2.84698C16.5227 2.36708 18.5008 2.91382 19.7828 3.91825ZM10.7484 9.80845C10.0633 9.67087 9.12171 9.43976 8.09412 9.06408C6.7369 8.56789 5.16088 7.79418 3.84072 6.59571C3.86435 6.81625 3.89789 7.03492 3.94183 7.24766C4.16308 8.31899 4.5742 8.91899 4.94721 9.10549C5.40342 9.3336 5.61484 9.8685 5.43787 10.3469C5.19827 10.9946 4.56809 11.0477 3.99551 10.9046C4.45603 11.595 5.28377 12.2834 6.66439 12.5135C7.14057 12.5929 7.49208 13.0011 7.49986 13.4838C7.50765 13.9665 7.16949 14.3858 6.69611 14.4805L5.82565 14.6546C5.95881 14.7703 6.103 14.8838 6.2567 14.9902C6.95362 15.4727 7.65336 15.6808 8.25746 15.5298C8.70991 15.4167 9.18047 15.6313 9.39163 16.0472C9.60278 16.463 9.49846 16.9696 9.14018 17.2681C8.49626 17.8041 7.74425 18.2342 6.99057 18.5911C6.63675 18.7587 6.24134 18.9241 5.8119 19.0697C6.14218 19.1402 6.48586 19.198 6.84078 19.2417C8.61136 19.4594 10.5821 19.3126 12.4249 18.6792C14.2614 18.0479 15.9589 16.9385 17.2289 15.2312C18.497 13.5262 19.382 11.1667 19.5007 7.96291C19.51 7.71067 19.6144 7.47129 19.7929 7.29281C20.2425 6.84316 20.6141 6.32777 20.7969 5.7143C20.477 5.81403 20.1168 5.90035 19.6878 5.98237C19.3623 6.04459 19.0272 5.94156 18.7929 5.70727C18.0284 4.94274 16.5164 4.43998 15.2599 4.77822C14.6686 4.93741 14.1311 5.28203 13.7274 5.89906C13.3153 6.52904 13 7.51045 13 8.9999C13 9.28288 12.8801 9.5526 12.6701 9.74221C12.1721 10.1917 11.334 9.92603 10.7484 9.80845Z" fill="#0F0F0F"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+      </footer>
+</body>
+</html>

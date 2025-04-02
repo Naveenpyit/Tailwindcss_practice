@@ -1,64 +1,67 @@
 {% load static %}
 {% load static tailwind_tags %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naveen2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     {% tailwind_css %}
 </head>
-<body class="p-5 md:p-10 bg-gray-900 ">
-    <section class="bg-blue-900 rounded-2xl p-5">
-        <div class="container mx-auto">
-            <div class="flex">
-                <button class="text-white pr-3 lg:hidden mb-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
-                      </svg>                      
-                </button>
-                <div class="flex">
-                    <img src="{% static 'img/726056.png' %}" class="w-12 h-12 md:w-10 h-10" alt="">
-                    <p class="text-2xl lg:text-4xl font-bold text-white ml-2">My Portfolio</p>    
-                </div>
-                <div class="flex ml-auto">
-                    
-                    <ul class="lg:flex text-white font-bold my-auto hidden ml-auto">
-                        <li class="text-lg mr-5 "><a class="p-3 hover:border-2 border-blue-300 rounded " href="#">Home</a></li>
-                        <li class="text-lg mr-5 "><a class="p-3 hover:border-2 border-blue-300 rounded " href="#">About</a></li>
-                        <li class="text-lg mr-5 "><a class="p-3 hover:border-2 border-blue-300 rounded " href="#">Skills</a></li>
-                        <li class="text-lg mr-5 "><a class="p-3 hover:border-2 border-blue-300 rounded " href="#">Projects</a></li>
-                        <li class="text-lg mr-5 "><a class="p-3 hover:border-2 border-blue-300 rounded " href="#">Contact</a></li>
-                    </ul>
-                </div>             
-                <a href="#" class="flex ml-auto text-white bg-red-400 px-3 py-3 rounded font-bold">
-                    <span class="pr-1 hidden lg:block">
-                        Download CV
-                    </span>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
-                  </svg></a>
-            </div>
-            <div class="hidden">
-                <ul class="text-white font-bold my-auto lg:hidden">
-                    <li class="mt-1"><a class="py-2" href="#">Home</a></li>
-                    <li class="mt-1"><a class="py-2" href="#">About</a></li>
-                    <li class="mt-1"><a class="py-2" href="#">Skills</a></li>
-                    <li class="mt-1"><a class="py-2" href="#">Projects</a></li>
-                    <li class="mt-1"><a class="py-2" href="#">Contact</a></li>
-                </ul> 
-            </div>
-            <div class="flex py-5 lg:py-36">
-                <div class="md:w-full lg:w-1/2 text-white font-bold">
-                    <h1 class="mt-20 text-4xl lg:text-7xl text-center lg:text-left">Naveenkumar M,</h1>
-                    <h2 class="text-2xl lg:text-4xl text-center lg:text-left mt-1 font-light mt-3">Full Stack Django and API Developer,</h2>
-                </div>
-                <div class="hidden lg:flex w-1/2 ">
-                    <img class="mx-auto rounded-2xl " src="{% static 'img/laptop-with-program-code-isometric-icon-software-development-programming-applications-dark-neon_39422-971.avif' %}" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
-    
+<body>   
+   <div class=" bg-green-200">
+      <nav class="flex justify-between items-center">
+         <div class="h-20 w-20 mt-2">
+            <a href=""><img class="rounded-full ms-2" src="{% static 'img/download.png'  %}" alt=""></a>
+         </div>
+         <ul class="flex space-x-7 font-bold">
+            <li><a class="text-black hover:text-blue-500 hover:border-2 border-black p-2 rounded" href="#">Services</a></li>
+            <li><a class="text-black hover:text-blue-500 hover:border-2 border-black p-2 rounded" href="#">Pricing</a></li>
+            <li><a class="text-black hover:text-blue-500 hover:border-2 border-black p-2 rounded" href="#">About</a></li>
+            <li><a class="text-black hover:text-blue-500 hover:border-2 border-black p-2 rounded" href="#">Contact</a></li>
+         </ul>
+      <button class="bg-indigo-400 px-5 py-3 text-white rounded font-bold mx-5 border-2 border-black hover:bg-green-400 ">Sign Up</button>
+      </nav>
+   </div>
+   <div class="container mx-auto flex">
+      <div class="w-1/2 text-center mt-16">
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, cumque ipsam maiores explicabo hic enim veniam tempore excepturi, officia soluta eaque, tempora non beatae? Eum labore doloremque totam ex voluptate odio, eius porro ad assumenda commodi architecto minima ipsum nulla ut quibusdam expedita quam tempora quae possimus repellat dolorem distinctio.</p>
+         <button class="bg-indigo-400 p-3 rounded-lg text-white font-bold border-2 border-black mt-4 hover:bg-green-400">Get started</button>
+      </div>
+      <div class="w-1/2">
+         <img class="" src="{% static 'img/hero.png' %}" alt="">
+      </div>
+   </div>
+
+   <!-- Main Section -->
+    <div class="container flex mx-auto mt-16">
+         <div class="w-1/3 text-center justify-items-center ">
+            <span class="bg-green-300 p-3 text-black text-3xl font-bold rounded">Web Development</span>
+            <img class="w-64 h-64 mt-8" src="{% static 'img/web-developer.svg' %}" alt="">
+            <p class="font-thin text-lg mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis molestiae aut inventore dolorem quisquam dolores.</p>
+         </div>
+         <div class="w-1/3 text-center justify-items-center">
+            <span class="bg-green-300 p-3 text-black text-3xl font-bold rounded">Mobile App Development</span>
+            <img class="w-64 h-64 mt-8" src="{% static 'img/mobile-application.svg' %}" alt="">
+            <p class="font-thin text-lg mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis molestiae aut inventore dolorem quisquam dolores.</p>
+         </div>
+         <div class="w-1/3 text-center justify-items-center">
+            <span class="bg-green-300 p-3 text-black text-3xl font-bold rounded">Design</span>
+            <img class="w-64 h-64 mt-8" src="{% static 'img/designer.svg' %}" alt="">
+            <p class="font-thin text-lg mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis molestiae aut inventore dolorem quisquam dolores.</p>
+         </div>
+    </div>
+    <hr>
+    <div class="container mx-auto flex">
+      <div class="text-center">
+         <h1 class="text-green-400 text-4xl font-bold">Pricing</h1>
+         <p class="text">Offers multiple packages for Monthly and yearly Subcriptions</p>
+         <p>Features Plans are heer.</p>
+      </div>
+      
+    </div>
 </body>
 </html>

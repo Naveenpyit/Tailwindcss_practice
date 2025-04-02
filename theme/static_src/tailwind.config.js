@@ -43,6 +43,9 @@ module.exports = {
     ],
     theme: {
         extend: {},
+        fontFamily:{
+            bebas:['Bebas Neue','sans-serif']
+        }
     },
     plugins: [
         /**
@@ -54,4 +57,6 @@ module.exports = {
         require('@tailwindcss/typography'),
         require('@tailwindcss/aspect-ratio'),
     ],
+    darkMode:"selector"
+    
 }
