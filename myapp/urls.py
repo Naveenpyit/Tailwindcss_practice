@@ -20,4 +20,5 @@ from django.urls import path,include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('tcss.urls')),
+    path('av7/',include('av7.urls')),
 ]
